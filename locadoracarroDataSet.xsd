@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="locadoracarroDataSet" targetNamespace="http://tempuri.org/locadoracarroDataSet.xsd" xmlns:mstns="http://tempuri.org/locadoracarroDataSet.xsd" xmlns="http://tempuri.org/locadoracarroDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="locadoracarroConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="locadoracarroConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Aula_Banco_Locadora.Properties.Settings.GlobalReference.Default.locadoracarroConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="carroTableAdapter" GeneratorDataComponentClassName="carroTableAdapter" Name="carro" UserDataComponentName="carroTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="locadoracarroConnectionString (Settings)" DbObjectName="locadoracarro.carro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `nomeCarro`, `marcaCarro`, `anoCarro`, `corCarro`, `ativoCarro` FROM `carro`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nomeCarro" DataSetColumn="nomeCarro" />
+              <Mapping SourceColumn="marcaCarro" DataSetColumn="marcaCarro" />
+              <Mapping SourceColumn="anoCarro" DataSetColumn="anoCarro" />
+              <Mapping SourceColumn="corCarro" DataSetColumn="corCarro" />
+              <Mapping SourceColumn="ativoCarro" DataSetColumn="ativoCarro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="locadoracarroDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="locadoracarroDataSet" msprop:Generator_UserDSName="locadoracarroDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="carro" msprop:Generator_TableClassName="carroDataTable" msprop:Generator_TableVarName="tablecarro" msprop:Generator_TablePropName="carro" msprop:Generator_RowDeletingName="carroRowDeleting" msprop:Generator_RowChangingName="carroRowChanging" msprop:Generator_RowEvHandlerName="carroRowChangeEventHandler" msprop:Generator_RowDeletedName="carroRowDeleted" msprop:Generator_UserTableName="carro" msprop:Generator_RowChangedName="carroRowChanged" msprop:Generator_RowEvArgName="carroRowChangeEvent" msprop:Generator_RowClassName="carroRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nomeCarro" msprop:Generator_ColumnVarNameInTable="columnnomeCarro" msprop:Generator_ColumnPropNameInRow="nomeCarro" msprop:Generator_ColumnPropNameInTable="nomeCarroColumn" msprop:Generator_UserColumnName="nomeCarro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marcaCarro" msprop:Generator_ColumnVarNameInTable="columnmarcaCarro" msprop:Generator_ColumnPropNameInRow="marcaCarro" msprop:Generator_ColumnPropNameInTable="marcaCarroColumn" msprop:Generator_UserColumnName="marcaCarro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="anoCarro" msprop:Generator_ColumnVarNameInTable="columnanoCarro" msprop:Generator_ColumnPropNameInRow="anoCarro" msprop:Generator_ColumnPropNameInTable="anoCarroColumn" msprop:Generator_UserColumnName="anoCarro" type="xs:byte" />
+              <xs:element name="corCarro" msprop:Generator_ColumnVarNameInTable="columncorCarro" msprop:Generator_ColumnPropNameInRow="corCarro" msprop:Generator_ColumnPropNameInTable="corCarroColumn" msprop:Generator_UserColumnName="corCarro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ativoCarro" msprop:Generator_ColumnVarNameInTable="columnativoCarro" msprop:Generator_ColumnPropNameInRow="ativoCarro" msprop:Generator_ColumnPropNameInTable="ativoCarroColumn" msprop:Generator_UserColumnName="ativoCarro" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
